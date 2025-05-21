@@ -13,7 +13,7 @@ async function checkWeather() {
   // the "try" is here because the internet may not be working
   // it is like an "if ... else" statement"
   try {
-    const resultJSON = await fetch("https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}")
+    const resultJSON = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=your_api_key`)
     const jsonData = await resultJSON.json()
     console.log(jsonData)
     const weatherRightNow = jsonData.data[0]
